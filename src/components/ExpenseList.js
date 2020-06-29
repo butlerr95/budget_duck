@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
-import Expense;
+import React from 'react';
+import ExpenseListHeader from './ExpenseListHeader';
 
-class ExpenseList extends Component {
+class ExpenseList extends React.Component {
     render() {
-        return(
-            
-        )
+        return (
+            <div style={expenseListStyle}>
+                <div>
+                    {this.props.children}
+                </div>    
+            </div>
+        );
     }
+}
+
+const expenseListStyle = {
+    paddingTop: 30,
+    display: 'flex',
+    flexDirection: 'column'
 }
 
 export default ExpenseList;

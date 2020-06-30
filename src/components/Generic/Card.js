@@ -1,6 +1,6 @@
 import React from 'react';
-import Color from '../styles/color';
-import Font from '../styles/font';
+import Color from '../../styles/color';
+import Font from '../../styles/font';
 
 class Card extends React.Component {
     render() {
@@ -30,16 +30,22 @@ const titleStyle = {
 }
 
 const cardStyle = {
-    backgroundColor: Color.backgroundColor,
-    boxShadow: '2px 2px 7px 0.5px #000',
     display: 'flex',
     flexDirection: 'column',
-    flexGrow: 1
+    flexGrow: 1,
+    flexShrink: 1,
+    backgroundColor: Color.backgroundColor,
+    boxShadow: '2px 2px 7px 0.5px #000',
+    borderRadius: 5,
+    overflow: 'hidden'
 };
 
 const contentStyle = {
-    padding: 30,
-    flexGrow: 1
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    flexShrink: 1,
+    alignItems: 'center'
 };
 
 export default Card;

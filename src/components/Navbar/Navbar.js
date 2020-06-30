@@ -1,8 +1,8 @@
 import React from 'react';
 import NavbarItem from './NavbarItem';
 import { MdHome, MdArrowBack, MdSettings } from 'react-icons/md';
-import Color from '../styles/color';
-import Font from '../styles/font';
+import Color from '../../styles/color';
+import Font from '../../styles/font';
 
 class Navbar extends React.Component {
 

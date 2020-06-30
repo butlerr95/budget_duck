@@ -1,6 +1,6 @@
 import React from 'react';
-import Font from '../styles/font';
-import Color from '../styles/color';
+import Font from '../../styles/font';
+import Color from '../../styles/color';
 
 class Table extends React.Component {
     render() {

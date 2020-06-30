@@ -8,7 +8,7 @@ const Font = {
     normalSize: 16,
     graphSize: 13,
     iconLarge: 35,
-    iconSmall: 20
+    iconSmall: 22
 }
 
 export default Font;

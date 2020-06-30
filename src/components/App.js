@@ -1,9 +1,12 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Card from './Card';
-import ThisWeek from './ThisWeek';
+import { MdArrowBack, MdArrowForward } from 'react-icons/md';
+
 import Color from '../styles/color';
-import LineGraph from './LineGraph';
+import Font from '../styles/font';
+
+import Navbar from './Navbar/Navbar';
+import Card from './Generic/Card';
+import WeeklyCard from './WeeklyCard/WeeklyCard';
 
 class App extends React.Component {
 
@@ -12,9 +15,10 @@ class App extends React.Component {
             <div style={mainContentStyle}>
                 <div style={gridStyle}>
                     <Navbar style={navbarStyle} />
-                    <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
-                    <Card style={annualStyle} title={"Annual Expenditure"} />
-                    <Card style={monthlyStyle} title={"Monthly Expenditure"} />
+                    {/* WeeklyCard */}
+                    <WeeklyCard />
+                    <Card style={annualStyle} title={"Annual Spending"} />
+                    <Card style={monthlyStyle} title={"Monthly Spending"} />
                 </div>
                 
                 {/* <Card style={thisWeekStyle} title={"This Week"} />
@@ -29,7 +33,7 @@ class App extends React.Component {
                             <option>2020</option>
                         </select>
                     </div>
-                    <LineGraph data={lineData} height={300} width={700} /> 
+                    
                 </Card>
                 <Card style={monthlyExpenditureStyle} title={'Monthly Expenditure'}>
                     <div>
@@ -65,17 +69,12 @@ const gridStyle = {
     gridTemplateRows: 'auto repeat(2, 1fr) 0px',
     gridColumnGap: 40,
     gridRowGap: 40,
-    flexGrow: 1
+    flexGrow: 1,
+    flexShrink: 1
 };
 
 const navbarStyle = {
     gridArea: '1 / 1 / 2 / 6'
-};
-
-const thisWeekStyle = {
-    gridArea: '2 / 2 / 4 / 2',
-    display: 'flex',
-    flexGrow: 1
 };
 
 const annualStyle = {
@@ -90,55 +89,35 @@ const monthlyStyle = {
 
 const lineData = [
     {
-        "id": "Annual spending",
+        "id": "This Week",
         "data": [
             {
-                "x": "Jan",
-                "y": 600
+                "x": "Mon",
+                "y": 15.65
             },
             {
-                "x": "Feb",
-                "y": 500
+                "x": "Tues",
+                "y": 23.40
             },
             {
-                "x": "Mar",
-                "y": 300
+                "x": "Wed",
+                "y": 24.56
             },
             {
-                "x": "Apr",
-                "y": 450
+                "x": "Thurs",
+                "y": 24.56
             },
             {
-                "x": "May",
-                "y": 475
+                "x": "Fri",
+                "y": 31.22
             },
             {
-                "x": "Jun",
-                "y": 590
+                "x": "Sat",
+                "y": 41.70
             },
             {
-                "x": "Jul",
-                "y": 1000
-            },
-            {
-                "x": "Aug",
-                "y": 700
-            },
-            {
-                "x": "Sep",
-                "y": 800
-            },
-            {
-                "x": "Oct",
-                "y": 560
-            },
-            {
-                "x": "Nov",
-                "y": 576
-            },
-            {
-                "x": "Dec",
-                "y": 645
+                "x": "Sun",
+                "y": 41.70
             }
         ]
     }

@@ -17,9 +17,11 @@ With the React server running, the app can be run inside an electron browserWind
 
 
 ## Colours
+Use FlatUI German Palette: https://flatuicolors.com/palette/de
 
-#3867d6 - general theme
+0to255: https://www.0to255.com/
 
-#20bf6b - success
-#f7b731 - warning
-#fc5c65 - error
+- #3867d6 - general theme
+- #20bf6b - success
+- #f7b731 - warning
+- #fc5c65 - error

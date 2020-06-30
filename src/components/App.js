@@ -15,7 +15,7 @@ class App extends React.Component {
                 <Navbar />
                 <div style={mainContentStyle}>
                     <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
-                    {/*<Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
+                    <Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
                         <div>
                             <label>Year</label>
                             <select>
@@ -38,7 +38,7 @@ class App extends React.Component {
                             </select>
                         </div>
                         <LineGraph data={lineData} height={300} width={700} /> 
-                    </Card> */}
+                    </Card>
                 </div>
             </div>
         );
@@ -47,8 +47,9 @@ class App extends React.Component {
 
 const mainContentStyle = {
     display: 'grid',
-    gridTemplateRows: '10% 100% 100%',
-    gridTemplateColumns: '30% 30% 30%',
+    gridTemplateRows: '3% 45% 4% 45% 3%',
+    gridTemplateColumns: '2% 31% 2% 31% 2% 31% 2%',
+    flexGrow: 1
 }
 
 const thisWeekStyle = {
@@ -73,8 +74,8 @@ const monthlyExpenditureStyle = {
 };
 
 const backgroundStyle = {
-    display: 'inline-block',
-    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
     height: 'calc(100%-30px)',
     width: '100%',
     margin: 0

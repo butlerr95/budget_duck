@@ -4,81 +4,84 @@ import Card from './Card';
 import MainContent from './MainContent';
 import ThisWeek from './ThisWeek';
 import Color from '../styles/color';
-import { MdBlock } from 'react-icons/md';
 import LineGraph from './LineGraph';
 
 class App extends React.Component {
 
     render() {
         return (
-            <div style={backgroundStyle}>
-                <Navbar />
-                <div style={mainContentStyle}>
-                    <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
-                    <Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
-                        <div>
-                            <label>Year</label>
-                            <select>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                            </select>
-                        </div>
-                        <LineGraph data={lineData} height={300} width={700} /> 
+            <div style={mainContentStyle}>
+                <div style={gridStyle}>
+                    <Navbar style={navbarStyle} />
+                    <Card style={thisWeekStyle} title={"This Week"}>
+                        <div>Hello World!</div>
                     </Card>
-                    <Card style={monthlyExpenditureStyle} title={'Monthly Expenditure'}>
-                        <div>
-                            <label>Year</label>
-                            <select>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option>2019</option>
-                                <option>2020</option>
-                            </select>
-                        </div>
-                        <LineGraph data={lineData} height={300} width={700} /> 
-                    </Card>
+                    <Card style={annualStyle} title={"Annual Expenditure"} />
+                    <Card style={monthlyStyle} title={"Monthly Expenditure"} />
                 </div>
+                
+                {/* <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
+                <Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
+                    <div>
+                        <label>Year</label>
+                        <select>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                        </select>
+                    </div>
+                    <LineGraph data={lineData} height={300} width={700} /> 
+                </Card>
+                <Card style={monthlyExpenditureStyle} title={'Monthly Expenditure'}>
+                    <div>
+                        <label>Year</label>
+                        <select>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                        </select>
+                    </div>
+                    <LineGraph data={lineData} height={300} width={700} />  
+                </Card>*/}
             </div>
         );
     }
 }
 
 const mainContentStyle = {
+    margin: 0,
+    maxHeight: '100vh',
+    width: '100%',
+    backgroundColor: Color.backgroundColor
+};
+
+// 'row-start / column-start / row-end / column-end'
+
+const gridStyle = {
     display: 'grid',
-    gridTemplateRows: '3% 45% 4% 45% 3%',
-    gridTemplateColumns: '2% 31% 2% 31% 2% 31% 2%',
-    flexGrow: 1
-}
+    gridTemplateColumns: '0px repeat(3, 1fr) 0px',
+    gridTemplateRows: '1fr repeat(2, auto) 0px',
+    gridColumnGap: 40,
+    gridRowGap: 40
+};
+
+const navbarStyle = {
+    gridArea: '1 / 1 / 2 / 6',
+    width: '100%'
+};
 
 const thisWeekStyle = {
-    gridColumnStart: 2,
-    gridColumnEnd: 'span 1',
-    gridRowStart: 2,
-    gridRowEnd: 'span 1',
+    gridArea: '2 / 2 / 4 / 2'
 };
 
-const annualExpenditureStyle = {
-    gridColumnStart: 4,
-    gridColumnEnd: 'span 3',
-    gridRowStart: 2,
-    gridRowEnd: 'span 1',
+const annualStyle = {
+    gridArea: '2 / 3 / 2 / 5'
 };
 
-const monthlyExpenditureStyle = {
-    gridColumnStart: 4,
-    gridColumnEnd: 'span 3',
-    gridRowStart: 4,
-    gridRowEnd: 'span 1',
-};
-
-const backgroundStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    height: 'calc(100%-30px)',
-    width: '100%',
-    margin: 0
+const monthlyStyle = {
+    gridArea: '3 / 3 / 3 / 5'
 };
 
 const lineData = [

@@ -33,11 +33,13 @@ const cardStyle = {
     backgroundColor: Color.backgroundColor,
     boxShadow: '2px 2px 7px 0.5px #000',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flexGrow: 1
 };
 
 const contentStyle = {
-    padding: 30
+    padding: 30,
+    flexGrow: 1
 };
 
 export default Card;

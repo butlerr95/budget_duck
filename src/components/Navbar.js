@@ -20,16 +20,18 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div style={NavbarStyle}>
-                <NavbarItem onClick={this.handleBack}>
-                    <MdArrowBack style={iconStyle} />
-                </NavbarItem>
-                <NavbarItem onClick={this.handleHome}>
-                    <MdHome style={iconStyle} />
-                </NavbarItem>
-                <NavbarItem onClick={this.handleSettings}>
-                    <MdSettings style={iconStyle} />
-                </NavbarItem>
+            <div style={this.props.style}>
+                <div style={NavbarStyle}>
+                    <NavbarItem onClick={this.handleBack}>
+                        <MdArrowBack style={iconStyle} />
+                    </NavbarItem>
+                    <NavbarItem onClick={this.handleHome}>
+                        <MdHome style={iconStyle} />
+                    </NavbarItem>
+                    <NavbarItem onClick={this.handleSettings}>
+                        <MdSettings style={iconStyle} />
+                    </NavbarItem>
+                </div>
             </div>
         );
     }

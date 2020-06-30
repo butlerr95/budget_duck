@@ -5,7 +5,7 @@ const { app, BrowserWindow } = electron;
 let mainWindow;
 
 app.on('ready', () => {
-    mainWindow = new BrowserWindow({ frame: false, resizable: false })
+    mainWindow = new BrowserWindow()
     mainWindow.loadURL(`file://${__dirname}/public/index.html`);
     mainWindow.maximize();
 });

@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Card from './Card';
-import MainContent from './MainContent';
 import ThisWeek from './ThisWeek';
 import Color from '../styles/color';
 import LineGraph from './LineGraph';
@@ -13,14 +12,13 @@ class App extends React.Component {
             <div style={mainContentStyle}>
                 <div style={gridStyle}>
                     <Navbar style={navbarStyle} />
-                    <Card style={thisWeekStyle} title={"This Week"}>
-                        <div>Hello World!</div>
-                    </Card>
+                    <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
                     <Card style={annualStyle} title={"Annual Expenditure"} />
                     <Card style={monthlyStyle} title={"Monthly Expenditure"} />
                 </div>
                 
-                {/* <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
+                {/* <Card style={thisWeekStyle} title={"This Week"} />
+                <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
                 <Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
                     <div>
                         <label>Year</label>
@@ -52,9 +50,11 @@ class App extends React.Component {
 
 const mainContentStyle = {
     margin: 0,
-    maxHeight: '100vh',
+    backgroundColor: Color.backgroundColor,
+    height: '100%',
     width: '100%',
-    backgroundColor: Color.backgroundColor
+    display: 'flex',
+    flexDirection: 'column'
 };
 
 // 'row-start / column-start / row-end / column-end'
@@ -62,26 +62,30 @@ const mainContentStyle = {
 const gridStyle = {
     display: 'grid',
     gridTemplateColumns: '0px repeat(3, 1fr) 0px',
-    gridTemplateRows: '1fr repeat(2, auto) 0px',
+    gridTemplateRows: 'auto repeat(2, 1fr) 0px',
     gridColumnGap: 40,
-    gridRowGap: 40
+    gridRowGap: 40,
+    flexGrow: 1
 };
 
 const navbarStyle = {
-    gridArea: '1 / 1 / 2 / 6',
-    width: '100%'
+    gridArea: '1 / 1 / 2 / 6'
 };
 
 const thisWeekStyle = {
-    gridArea: '2 / 2 / 4 / 2'
+    gridArea: '2 / 2 / 4 / 2',
+    display: 'flex',
+    flexGrow: 1
 };
 
 const annualStyle = {
-    gridArea: '2 / 3 / 2 / 5'
+    gridArea: '2 / 3 / 2 / 5',
+    display: 'flex'
 };
 
 const monthlyStyle = {
-    gridArea: '3 / 3 / 3 / 5'
+    gridArea: '3 / 3 / 3 / 5',
+    display: 'flex'
 };
 
 const lineData = [

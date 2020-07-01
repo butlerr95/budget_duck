@@ -6,7 +6,7 @@ const Font = {
     navbarSize: 22,
     headingSize: 18,
     normalSize: 16,
-    graphSize: 13,
+    graphSize: 12,
     iconLarge: 35,
     iconSmall: 22
 }

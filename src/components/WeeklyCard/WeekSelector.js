@@ -39,16 +39,15 @@ const weekSelectorStyle = {
     width: '100%',
     justifyContent: 'center',
     boxSizing: 'border-box',
-    backgroundColor: 'rgb(119, 140, 163, 0.3)',
 };
 
 const weeklySelectorButtonStyle = {
     fontFamily: Font.family,
     fontSize: Font.iconSmall,
     fontWeight: 600,
-    color: 'rgb(75, 101, 132, 0.7)',
+    color: 'rgb(75, 101, 132, 0.9)',
     flexGrow: 1,
-    padding: 10,
+    padding: 15,
     textAlign: 'center'
 };
 
@@ -56,10 +55,10 @@ const weeklySelectorButtonHover = {
     fontFamily: Font.family,
     fontSize: Font.iconSmall,
     fontWeight: 600,
-    color: '#fff',
-    backgroundColor: 'rgb(75, 101, 132, 0.7)',
+    color: 'rgb(75, 101, 132, 0.9)',
+    backgroundColor: 'rgb(75, 101, 132, 0.2)',
     flexGrow: 1,
-    padding: 10,
+    padding: 15,
     textAlign: 'center'
 };
 
@@ -70,9 +69,10 @@ const inputStyle = {
     backgroundColor: 'rgb(0,0,0,0)',
     border: 'none',
     textAlign: 'center',
-    color: 'rgb(75, 101, 132, 0.7)',
+    color: 'rgb(75, 101, 132, 0.9)',
     width: '30%',
     minWidth: '100px',
+    paddingTop: 5,
     letterSpacing: 0.6
 };
 

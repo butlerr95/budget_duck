@@ -1,4 +1,5 @@
 import React from 'react';
+import Color from '../../styles/color';
 
 class List extends React.Component {
     render() {
@@ -11,11 +12,13 @@ class List extends React.Component {
 }
 
 const listStyle = {
-    padding: '10px 25px 10px 25px',
+    padding: '5px 25px 10px 25px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyItems: 'end'
+    justifyItems: 'end',
+    boxSixing: 'border-box',
+    width: '87.5%'
 };
 
 export default List;

@@ -9,6 +9,7 @@ import WeekSummary from './WeekSummary';
 import LineGraph from './LineGraph';
 import List from '../Generic/List';
 import Expense from './Expense';
+import RecentExpenses from './RecentExpenses';
 
 const expenses = [
     {
@@ -29,8 +30,8 @@ const expenses = [
         id: 3,
         date: "30/06/2020",
         category: "Entertainment",
-        description: "COD: Modern Warfare",
-        amount: 39.99
+        description: "Cinema",
+        amount: 11.99
     },
     {
         id: 4,
@@ -56,7 +57,8 @@ class WeeklyCard extends React.Component {
             <Card style={weeklyStyle} title={"Weekly Spending"}>
                 <WeekSelector />
                 <WeekSummary spent={45.60} remaining={32.20} />
-                <LineGraph width={500} height={275} />
+                <LineGraph width={500} height={300} />
+                <RecentExpenses />
                 <List>
                     {expenses.map((expense) => {
                         return <Expense expense={expense} />

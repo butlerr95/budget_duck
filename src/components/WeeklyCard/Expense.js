@@ -16,41 +16,51 @@ class Expense extends React.Component {
 }
 
 const expenseStyle = {
-    padding: '4px 0px 4px 0px',
-    maxWidth: '100%',
+    margin: 6,
+    padding: '12px 15px 12px 15px',
+    width: '100%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(7, 1fr)',
+    gridTemplateColumns: 'repeat(5, 1fr)',
     gridTemplateRows: '1',
-    gridColumnGap: 20,
-    gridRowGap: 20,
-    borderColor: Color.primaryColor,
-    borderStyle: 'solid',
-    borderWidth: 0,
-    borderTopWidth: 4,
+    gridColumnGap: 10,
+    gridRowGap: 10,
     alignItems: 'center',
+    justifyItems: 'start',
     fontFamily: Font.family,
-    fontSize: 14,
-    backgroundColor: 'rgba(56, 103, 214, 0.1)'
+    boxShadow: '0px 1px 3px 0px #000',
+    borderStyle: 'solid',
+    borderColor: Color.primaryColor,
+    borderWidth: 0,
+    borderLeftWidth: 7,
+    userSelect: 'none',
+    borderRadius: 2
 };
 
 const dateStyle = {
     gridArea: '1 / 1 / 1 / 2',
-    padding: 10
+    color: Color.textColor,
+    fontSize: 13,
+    opacity: 0.8
 }
 
 const categoryStyle = {
-    gridArea: '1 / 2 / 1 / 4',
-    padding: 10
+    gridArea: '1 / 2 / 1 / 3',
+    color: Color.textColor,
+    fontSize: 13,
 }
 
 const descriptionStyle = {
-    gridArea: '1 / 4 / 1 / 7',
-    padding: 10
+    gridArea: '1 / 3 / 1 / 5',
+    color: Color.textColor,
+    fontSize: 12
 }
 
 const amountStyle = {
-    gridArea: '1 / 7 / 1 / 8',
-    padding: 10
+    gridArea: '1 / 5 / 1 / 6',
+    color: Color.primaryColor,
+    fontWeight: 600,
+    fontSize: 13,
+    justifySelf: 'end'
 }
 
 export default Expense;

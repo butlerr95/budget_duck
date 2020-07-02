@@ -8,6 +8,7 @@ const Font = {
     normalSize: 16,
     graphSize: 12,
     iconLarge: 35,
+    iconMedium: 27,
     iconSmall: 22
 }
 

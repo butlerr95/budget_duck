@@ -28,34 +28,36 @@ const weekSummaryStyle = {
 
 const spentStyle = {
     gridArea: '2 / 2 / 2 / 4',
-    color: Color.primaryColor,
+    color: Color.textColor,
     fontFamily: Font.family,
-    fontSize: Font.normalSize,
+    fontSize: 15,
     padding: 8,
     justifySelf: 'stretch',
     textAlign: 'center',
     userSelect: 'none',
     borderColor: Color.primaryColor,
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderWidth: 0,
     borderTopWidth: 8,
-    borderRadius: 3
+    borderRadius: 3,
+    boxShadow: '0px 1px 4px 0px #000',
 };
 
 const remainingStyle = {
     gridArea: '2 / 4 / 2 / 6',
-    color: Color.primaryColor,
+    color: Color.textColor,
     fontFamily: Font.family,
-    fontSize: Font.normalSize,
+    fontSize: 15,
     padding: 8,
     justifySelf: 'stretch',
     textAlign: 'center',
     userSelect: 'none',
     borderColor: Color.primaryColor,
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderWidth: 0,
     borderTopWidth: 8,
-    borderRadius: 3
+    borderRadius: 3,
+    boxShadow: '0px 1px 4px 0px #000',
 };
 
 export default WeekSummary;

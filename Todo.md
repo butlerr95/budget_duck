@@ -66,3 +66,4 @@ Seperate page/window that displays a form to allow the user to add an expense.
 - Ability to view full list/table of expenses in seperate page by clicking 'View all expenses' or similar.
 - Loading screen when opening electron app?
 - Extension to the Navbar element whereby the leftmost element becomes a user element and a login screen is added to allow a user to login.
+- Allow user to assign a colour to each category, use that colour as the background when referencing that category

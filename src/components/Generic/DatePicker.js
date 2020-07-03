@@ -21,12 +21,19 @@ class DatePicker extends React.Component {
         return dateFnsFormat(date, format, { locale });
     }
 
+    getMonday = (date) => {
+        date = new Date(date);
+        var day = date.getDay(),
+            diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+        return new Date(date.setDate(diff));
+      }
+
     render() {
         const FORMAT = "dd/MM/yyyy";
         return (
             <DayPickerInput
                 keepFocus={false}
-                value={this.props.date}
+                value={this.getMonday(this.props.date)}
                 formatDate={this.formatDate}
                 format={FORMAT}
                 parseDate={this.parseDate}

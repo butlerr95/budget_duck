@@ -1,0 +1,92 @@
+@import 'global.css';
+
+.DayPickerInput {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.DayPickerInput input {
+    background-color: var(--background-color);
+    border: none;
+    text-align: center;
+    flex-grow: 1;
+    font: var(--font-weight-normal) var(--font-size-normal) var(--font-family);
+    text-shadow: 0 0 0 var(--text-color-normal);
+    color: transparent;
+    opacity: 0.85;
+    user-select: none;
+    letter-spacing: 0.5;
+}
+
+.DayPickerInput input:hover {
+    background-color: rgb(0,0,0,0.1);
+    opacity: 1;
+    cursor: default;
+}
+
+.DayPickerInput input::selection {
+    opacity: 0;
+}
+
+.DayPickerInput input:active {
+    box-shadow:inset 0px 1px 5px 0px rgb(0,0,0,0.5);
+    border: none;
+}
+
+.DayPickerInput input:focus {
+    background-color: rgb(0,0,0,0.1);
+    box-shadow:inset 0px 1px 5px 0px rgb(0,0,0,0.5);
+    opacity: 1;
+    outline: none;
+}
+
+.DayPickerInput-Overlay {
+    color: var(--text-color-normal);
+    background-color: var(--background-color);
+}
+
+.DayPicker-wrapper:focus {
+    outline: none;
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+    background-color: rgb(0,0,0,0.1);
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):focus {
+    outline: none;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: var(--primary-color);
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+    background-color: var(--primary-color);
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):focus {
+    outline: none;
+}
+
+.DayPicker-NavButton--next:focus {
+    outline: none;
+}
+
+.DayPicker-NavButton--prev:focus {
+    outline: none;
+}
+
+.DayPicker-Day--outside:not(.DayPicker-Day--disabled):hover {
+    background-color: rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.DayPicker-Day--outside:not(.DayPicker-Day--disabled):focus {
+    outline: none;
+}
+
+.DayPicker-Day--disabled:focus {
+    outline: none;
+}

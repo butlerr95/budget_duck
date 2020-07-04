@@ -8,6 +8,22 @@ import Navbar from './Navbar/Navbar';
 import Card from './Generic/Card';
 import WeeklyCard from './WeeklyCard/WeeklyCard';
 
+import styles from '../styles/App.css';
+import BarGraph from './Graphs/BarGraph';
+import MonthlyCard from './MonthlyCard/MonthlyCard';
+
+import WeekSelector from './WeeklyCard/WeekSelector';
+
+const testData = [
+    { x: 'Mon', y: 4.25 },
+    { x: 'Tues', y: 9 },
+    { x: 'Wed', y: 13.50 },
+    { x: 'Thurs', y: 23.45 },
+    { x: 'Fri', y: 23.45 },
+    { x: 'Sat', y: 27.84 },
+    { x: 'Sun', y: 44.78 }
+];
+
 class App extends React.Component {
 
     render() {
@@ -15,38 +31,14 @@ class App extends React.Component {
             <div style={mainContentStyle}>
                 <div style={gridStyle}>
                     <Navbar style={navbarStyle} />
-                    {/* WeeklyCard */}
                     <WeeklyCard />
-                    <Card style={annualStyle} title={"Annual Spending"} />
-                    <Card style={monthlyStyle} title={"Monthly Spending"} />
+                    <Card style={annualStyle} title={"Annual Spending"}>
+                        {/* Replace with Year Selector!! */}
+                        <WeekSelector />
+                        <BarGraph width={800} height={275} />
+                    </Card>
+                    <MonthlyCard style={monthlyStyle} />
                 </div>
-                
-                {/* <Card style={thisWeekStyle} title={"This Week"} />
-                <ThisWeek style={thisWeekStyle} spent={12.45} remaining={45.70}/>
-                <Card style={annualExpenditureStyle} title={'Annual Expenditure'}>
-                    <div>
-                        <label>Year</label>
-                        <select>
-                            <option>2017</option>
-                            <option>2018</option>
-                            <option>2019</option>
-                            <option>2020</option>
-                        </select>
-                    </div>
-                    
-                </Card>
-                <Card style={monthlyExpenditureStyle} title={'Monthly Expenditure'}>
-                    <div>
-                        <label>Year</label>
-                        <select>
-                            <option>2017</option>
-                            <option>2018</option>
-                            <option>2019</option>
-                            <option>2020</option>
-                        </select>
-                    </div>
-                    <LineGraph data={lineData} height={300} width={700} />  
-                </Card>*/}
             </div>
         );
     }
@@ -86,41 +78,5 @@ const monthlyStyle = {
     gridArea: '3 / 3 / 3 / 5',
     display: 'flex'
 };
-
-const lineData = [
-    {
-        "id": "This Week",
-        "data": [
-            {
-                "x": "Mon",
-                "y": 15.65
-            },
-            {
-                "x": "Tues",
-                "y": 23.40
-            },
-            {
-                "x": "Wed",
-                "y": 24.56
-            },
-            {
-                "x": "Thurs",
-                "y": 24.56
-            },
-            {
-                "x": "Fri",
-                "y": 31.22
-            },
-            {
-                "x": "Sat",
-                "y": 41.70
-            },
-            {
-                "x": "Sun",
-                "y": 41.70
-            }
-        ]
-    }
-];
 
 export default App; 

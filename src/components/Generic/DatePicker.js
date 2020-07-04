@@ -8,6 +8,24 @@ import 'react-day-picker/lib/style.css';
 import styles from '../../styles/DatePicker.css';
 
 class DatePicker extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.dayPickerInputRef = React.createRef();
+    }
+
+    // When date is changed call the onChange event in the parent element
+    handleDateChange = () => {
+        this.props.onChange(this.dayPickerInputRef.current.state.month);
+    }
+
+    // Given a date return the Monday of that week
+    getMonday = (date) => {
+        date = new Date(date);
+        var day = date.getDay(),
+            diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+        return new Date(date.setDate(diff));
+    }
 
     parseDate = (str, format, locale) => {
         const parsed = dateFnsParse(str, format, new Date(), { locale });
@@ -21,24 +39,18 @@ class DatePicker extends React.Component {
         return dateFnsFormat(date, format, { locale });
     }
 
-    getMonday = (date) => {
-        date = new Date(date);
-        var day = date.getDay(),
-            diff = date.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
-        return new Date(date.setDate(diff));
-      }
-
     render() {
         const FORMAT = "dd/MM/yyyy";
         return (
             <DayPickerInput
+                ref={this.dayPickerInputRef}
                 keepFocus={false}
                 value={this.getMonday(this.props.date)}
                 formatDate={this.formatDate}
                 format={FORMAT}
                 parseDate={this.parseDate}
                 inputProps={{
-                    readonly: 'readonly'
+                    readOnly: 'readonly'
                 }}
                 dayPickerProps={{
                     firstDayOfWeek: 1,
@@ -47,8 +59,9 @@ class DatePicker extends React.Component {
                     showOutsideDays: true,
                     modifiers: {
                         disabled: { daysOfWeek: [0, 2, 3, 4, 5, 6] }
-                    },
+                    }
                 }}
+                onDayChange={this.handleDateChange}
             />
         );
     }

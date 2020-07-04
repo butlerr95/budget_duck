@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nivo/line": "^0.62.0",
-    "@nivo/pie": "^0.62.0",
     "axios": "^0.19.2",
     "css-loader": "^3.6.0",
     "date-fns": "^2.14.0",

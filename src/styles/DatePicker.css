@@ -14,7 +14,7 @@
     font: var(--font-weight-normal) var(--font-size-normal) var(--font-family);
     text-shadow: 0 0 0 var(--text-color-normal);
     color: transparent;
-    opacity: 0.85;
+    opacity: 0.9;
     user-select: none;
     letter-spacing: 0.5;
 }

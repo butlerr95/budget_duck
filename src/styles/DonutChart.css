@@ -1,0 +1,41 @@
+@import 'global.css';
+
+.donut_chart svg {
+    width: 100%;
+    display: block;
+    justify-items: stretch;
+}
+
+/* Remaining Amount */
+.donut_chart g path:first-of-type {
+    fill: var(--secondary-color) !important;
+}
+
+/* Spent Amount */
+.donut_chart g path:last-of-type {
+    fill: var(--primary-color) !important;
+}
+
+.donut_chart g tspan {
+    font-family: sans-serif !important;
+    font-size: var(--font-size-normal) !important;
+    stroke: none !important;
+    fill: var(--text-color-normal) !important;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.donut_chart_label tspan {
+    font-family: sans-serif !important;
+    font-size: var(--font-size-large) !important;
+    color: var(--text-color-normal);
+    user-select: none;
+}
+
+.donut_chart_sub_label tspan {
+    font-family: sans-serif !important;
+    font-size: var(--font-size-normal) !important;
+    color: var(--text-color-normal);
+    user-select: none;
+    opacity: 0.8;
+}

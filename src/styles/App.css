@@ -1,0 +1,16 @@
+.weekly_card {
+    display: flex;
+    grid-area: 2 / 2 / 4 / 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0px repeat(3, 1fr) 0px;
+    grid-template-rows: auto repeat(2, 1fr) 0px;
+    grid-column-gap: 40;
+    grid-row-gap: 40;
+    flex-grow: 1;
+    flex-shrink: 1;
+}

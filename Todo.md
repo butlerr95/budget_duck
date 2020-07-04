@@ -20,7 +20,8 @@ Contains the following elements:
 
 The card is a container to hold the other elements.
 
-### WeekSelector [ ]
+### WeekSelector [x] 
+#### !!! BUG WHERE CLICKING ON THE DAY PICKER REMOVES FOCUS FROM THE DATE PICKER INPUT AND PREVENTS THE DAY PICKER FROM BEING HIDDEN UNTIL FOCUS IS SET BACK ON THE DAY PICKER INPUT !!!
 The week selector allows selection of the week. This can be done by cycling through the weeks using the arrows or by clicking on the date in the middle and choosing the week from a date picker input. In it's basic form it looks as below:
 
     <-  29-06-2020  ->
@@ -67,3 +68,7 @@ Seperate page/window that displays a form to allow the user to add an expense.
 - Loading screen when opening electron app?
 - Extension to the Navbar element whereby the leftmost element becomes a user element and a login screen is added to allow a user to login.
 - Allow user to assign a colour to each category, use that colour as the background when referencing that category
+- Moved generic functions into a separate js file - i.e. getMonday() in DatePicker and WeekSelector
+
+## Bugs
+- When DayPickerInput is selected and then the user clicks in the DayPicker overlay, the focus is shifted from DayPickerInput to DayPicker. Once this happens if the user clicks outside of the overlay it does not hide as it should - the user then has to choose a date or click on the DayPickerInput again and then click outside of the overlay.

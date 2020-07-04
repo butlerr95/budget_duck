@@ -50,6 +50,7 @@ class WeekSelector extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.date !== this.state.date) {
+            console.log(this.state.date);
             this.setForwardArrowDisabled();
         }
     }

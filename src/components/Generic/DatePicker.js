@@ -59,7 +59,8 @@ class DatePicker extends React.Component {
                     showOutsideDays: true,
                     modifiers: {
                         disabled: { daysOfWeek: [0, 2, 3, 4, 5, 6] }
-                    }
+                    },
+                    todayButton: "Current Week"
                 }}
                 onDayChange={this.handleDateChange}
             />

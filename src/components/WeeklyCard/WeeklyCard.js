@@ -1,12 +1,10 @@
 import React from 'react';
 
-import Font from '../../styles/font';
-import Color from '../../styles/color';
-
 import Card from '../Generic/Card';
 import WeekSelector from './WeekSelector';
 import WeekSummary from './WeekSummary';
-import LineGraph from './LineGraph';
+import LineGraph from '../Graphs/LineGraph';
+import DonutChart from '../Graphs/DonutChart';
 import List from '../Generic/List';
 import Expense from './Expense';
 import RecentExpenses from './RecentExpenses';
@@ -49,15 +47,19 @@ const expenses = [
     },
 ];
 
+const exampleData = [
+    { x: "Remaining", y: 15 },
+    { x: "Spent", y: 47.50 }
+];
+
 
 class WeeklyCard extends React.Component {
     
     render() {
         return (
-            <Card style={weeklyStyle} title={"Weekly Spending"}>
+            <Card style={weeklyCardStyle} title={"Weekly Spending"}>
                 <WeekSelector />
-                <WeekSummary spent={45.60} remaining={32.20} />
-                <LineGraph width={500} height={300} />
+                <DonutChart height={375} width={500} data={exampleData} />
                 <RecentExpenses />
                 <List>
                     {expenses.map((expense) => {
@@ -69,11 +71,11 @@ class WeeklyCard extends React.Component {
     }
 }
 
-const weeklyStyle = {
-    gridArea: '2 / 2 / 4 / 2',
+const weeklyCardStyle = {
     display: 'flex',
+    gridArea: '2 / 2 / 4 / 2',
     flexGrow: 1,
     flexShrink: 1
-};
+}
 
 export default WeeklyCard;

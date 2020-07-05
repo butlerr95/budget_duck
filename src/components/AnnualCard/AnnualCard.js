@@ -25,7 +25,7 @@ class AnnualCard extends React.Component {
             <Card className={this.props.className} title={"Annual Spending"}>
                 {/* Replace with Year Selector!! */}
                 <YearSelector />
-                <BarGraph width={600} height={275} data={testData} />
+                <BarGraph width={600} height={250} data={testData} />
             </Card>
         );
     }

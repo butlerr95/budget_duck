@@ -45,7 +45,7 @@ class MonthlyCard extends React.Component {
             <Card className={this.props.className} title={"Monthly Spending"}>
                 {/* Replace with Month Selector! */}
                 <WeekSelector />
-                <LineGraph width={600} height={275} data={testData} />
+                <LineGraph width={600} height={250} data={testData} />
             </Card>
         );
     }

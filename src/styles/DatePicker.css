@@ -17,6 +17,7 @@
     opacity: 0.9;
     user-select: none;
     letter-spacing: 0.5;
+    align-self: center;
 }
 
 .DayPickerInput input:hover {

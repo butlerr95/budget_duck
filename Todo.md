@@ -68,7 +68,10 @@ Seperate page/window that displays a form to allow the user to add an expense.
 - Loading screen when opening electron app?
 - Extension to the Navbar element whereby the leftmost element becomes a user element and a login screen is added to allow a user to login.
 - Allow user to assign a colour to each category, use that colour as the background when referencing that category
-- Moved generic functions into a separate js file - i.e. getMonday() in DatePicker and WeekSelector
+- Move generic functions into a separate js file - i.e. getMonday() in DatePicker and WeekSelector
+- Calculate earliest week/month/year from the database and use this to restrict the user from selecting dates before that time
+- Make graphs/charts interactive
 
 ## Bugs
 - When DayPickerInput is selected and then the user clicks in the DayPicker overlay, the focus is shifted from DayPickerInput to DayPicker. Once this happens if the user clicks outside of the overlay it does not hide as it should - the user then has to choose a date or click on the DayPickerInput again and then click outside of the overlay.
+- DayPickerInput overlay is constrained to the Card component since overflow is set to false on the Card component. This is an issue when the card is resized and the day picker is cut off.

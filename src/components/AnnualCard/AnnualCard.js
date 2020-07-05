@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Card from '../Generic/Card';
-import WeekSelector from '../WeeklyCard/WeekSelector';
+import YearSelector from './YearSelector';
 import BarGraph from './BarGraph';
 
 const testData = [
@@ -24,7 +24,7 @@ class AnnualCard extends React.Component {
         return (
             <Card className={this.props.className} title={"Annual Spending"}>
                 {/* Replace with Year Selector!! */}
-                <WeekSelector />
+                <YearSelector />
                 <BarGraph width={600} height={275} data={testData} />
             </Card>
         );

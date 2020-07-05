@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
-import styles from '../../styles/WeekSelector.css';
+import styles from '../../styles/Selector.css';
 import DatePicker from '../Generic/DatePicker';
 
 const dateFormat = 'dd/MM/yyyy';
@@ -16,6 +16,7 @@ class WeekSelector extends React.Component {
     // When the date is changed by the child DayPickerInput element, update the state
     handleChildDateChange = (date) => {
         this.setState({ date: date });
+        // Call this.props.onChange to pass value to parent
     }
     
     // Given a date return the Monday of that week
@@ -46,7 +47,6 @@ class WeekSelector extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.date !== this.state.date) {
-            console.log(this.state.date);
             this.setForwardArrowDisabled();
         }
     }
@@ -65,11 +65,11 @@ class WeekSelector extends React.Component {
 
     render() {
         return (
-            <div className={'week_selector'}>
-                <MdArrowBack className={'week_selector_button'} onClick={this.handleClickBack} />
+            <div className={'selector'}>
+                <MdArrowBack className={'selector_button'} onClick={this.handleClickBack} />
                 <DatePicker date={this.state.date} onChange={this.handleChildDateChange} />
                 <MdArrowForward 
-                    className={`week_selector_button${this.state.forwardArrowDisabled ? '_disabled' : ''}`} 
+                    className={`selector_button${this.state.forwardArrowDisabled ? '_disabled' : ''}`} 
                     onClick={this.state.forwardArrowDisabled ? undefined : this.handleClickForward} 
                 />
             </div>

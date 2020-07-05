@@ -1,9 +1,26 @@
 @import 'global.css';
 
+.line_graph {
+    flex-grow: 1;
+}
+
+.line_graph .VictoryContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-grow: 1;
+}
+
 .line_graph .VictoryContainer svg g g line {
     stroke: var(--text-color-normal) !important;
     stroke-width: 1.5px;
     stroke-opacity: 0.4;
+}
+
+.line_graph .VictoryContainer svg g line {
+    fill: var(--text-color-normal) !important;
+    stroke: var(--text-color-normal) !important;
+    opacity: 0.8;
 }
 
 .line_graph .VictoryContainer svg g g text tspan {
@@ -15,13 +32,13 @@
 }
 
 .line_graph .VictoryContainer svg g g path:first-of-type {
-    fill: var(--primary-color) !important;
+    fill: var(--graph-color-primary) !important;
     fill-opacity: 0.3;
     stroke: none !important;
 }
 
 .line_graph .VictoryContainer svg g g path:last-of-type {
     fill: none !important;
-    stroke: var(--primary-color) !important;
+    stroke: var(--graph-color-secondary) !important;
     stroke-width: 2.5;
 }

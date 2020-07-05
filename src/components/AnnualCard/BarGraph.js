@@ -8,7 +8,7 @@ class BarGraph extends React.Component {
         return (
             <div className={'bar_graph'}>
             <VictoryChart
-                padding={{ top: 20, left: 70, right: 30, bottom: 40 }}
+                padding={{ top: 0, left: 70, right: 30, bottom: 40 }}
                 domainPadding={{x: 30, y: [0, 30]}}
                 width={this.props.width}
                 height={this.props.height}
@@ -16,7 +16,7 @@ class BarGraph extends React.Component {
                 <VictoryAxis 
                     orientation="bottom"
                     style={{
-                        axis: { strokeWidth: 1 },
+                        axis: { strokeWidth: 0.75 },
                     }}
                 />
                 <VictoryAxis dependentAxis

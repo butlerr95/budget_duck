@@ -59,7 +59,7 @@ class WeeklyCard extends React.Component {
         return (
             <Card className={this.props.className} title={"Weekly Spending"}>
                 <WeekSelector />
-                <DonutChart height={375} width={500} data={exampleData} />
+                <DonutChart height={350} width={500} data={exampleData} />
                 <RecentExpenses />
                 <List>
                     {expenses.map((expense) => {

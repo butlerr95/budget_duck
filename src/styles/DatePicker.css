@@ -21,7 +21,7 @@
 }
 
 .DayPickerInput input:hover {
-    background-color: rgb(0,0,0,0.1);
+    background-color: var(--hover-color);
     opacity: 1;
     cursor: default;
 }
@@ -36,7 +36,7 @@
 }
 
 .DayPickerInput input:focus {
-    background-color: rgb(0,0,0,0.1);
+    background-color: var(--hover-color);
     box-shadow:inset 0px 1px 5px 0px rgb(0,0,0,0.5);
     opacity: 1;
     outline: none;
@@ -53,7 +53,7 @@
 }
 
 .DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
-    background-color: rgb(0,0,0,0.1);
+    background-color: var(--hover-color);
 }
 
 .DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):focus {
@@ -81,7 +81,7 @@
 }
 
 .DayPicker-Day--outside:not(.DayPicker-Day--disabled):hover {
-    background-color: rgb(0,0,0,0.1);
+    background-color: var(--hover-color);
     cursor: pointer;
 }
 
@@ -89,6 +89,15 @@
     outline: none;
 }
 
+.DayPicker-Day--disabled {
+    color: var(--text-color-normal) !important;
+    opacity: 0.4;
+}
+
 .DayPicker-Day--disabled:focus {
     outline: none;
+}
+
+.DayPicker-TodayButton {
+    color: var(--text-color-normal) !important;
 }

@@ -8,12 +8,12 @@
 
 /* Remaining Amount */
 .donut_chart g path:first-of-type {
-    fill: var(--secondary-color) !important;
+    fill: var(--graph-color-secondary) !important;
 }
 
 /* Spent Amount */
 .donut_chart g path:last-of-type {
-    fill: var(--primary-color) !important;
+    fill: var(--graph-color-primary) !important;
 }
 
 .donut_chart g tspan {
@@ -28,14 +28,15 @@
 .donut_chart_label tspan {
     font-family: sans-serif !important;
     font-size: var(--font-size-large) !important;
-    color: var(--text-color-normal);
+    fill: var(--text-color-normal) !important;
     user-select: none;
+    opacity: 0.9;
 }
 
 .donut_chart_sub_label tspan {
     font-family: sans-serif !important;
     font-size: var(--font-size-normal) !important;
-    color: var(--text-color-normal);
+    fill: var(--text-color-normal) !important;
     user-select: none;
     opacity: 0.8;
 }

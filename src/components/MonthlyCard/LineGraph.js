@@ -8,7 +8,7 @@ class LineGraph extends React.Component {
         return (
             <div className={'line_graph'}>
                 <VictoryChart
-                    padding={{ top: 20, left: 70, right: 30, bottom: 20 }}
+                    padding={{ top: 0, left: 70, right: 30, bottom: 20 }}
                     domainPadding={{y: [0, 30]}}
                     width={this.props.width}
                     height={this.props.height}
@@ -16,7 +16,7 @@ class LineGraph extends React.Component {
                     <VictoryAxis 
                         orientation="bottom"
                         style={{
-                            axis: { strokeWidth: 1 },
+                            axis: { strokeWidth: 0.75 },
                         }}
                         tickFormat={() => ''}
                     />

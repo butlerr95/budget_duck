@@ -1,7 +1,18 @@
 @import 'global.css';
 
+.bar_graph {
+    flex-grow: 1;
+}
+
+.bar_graph .VictoryContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-grow: 1;
+}
+
 .bar_graph .VictoryContainer svg g path {
-    fill: var(--primary-color) !important;
+    fill: var(--graph-color-primary) !important;
     stroke: var(--text-color-normal) !important;
     stroke-width: 1.5px;
     stroke-opacity: 0.1;
@@ -17,9 +28,11 @@
 
 .bar_graph .VictoryContainer svg g line {
     fill: var(--text-color-normal) !important;
+    stroke: var(--text-color-normal) !important;
     font-family: var(--font-family) !important;
     font-size: var(--font-size-graph) !important;
     font-weight: var(--font-weight-bold);
+    opacity: 0.8;
 }
 
 .bar_graph .VictoryContainer svg g g line {

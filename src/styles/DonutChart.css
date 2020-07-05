@@ -8,7 +8,8 @@
 
 /* Remaining Amount */
 .donut_chart g path:first-of-type {
-    fill: var(--graph-color-secondary) !important;
+    fill: var(--graph-color-primary) !important;
+    fill-opacity: 0.5;
 }
 
 /* Spent Amount */

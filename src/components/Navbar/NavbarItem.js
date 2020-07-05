@@ -5,7 +5,7 @@ import styles from '../../styles/Navbar.css';
 class NavbarItem extends React.Component {
     render() {
         return (
-            <div className={'navbar_item'}>
+            <div className={'navbar_item'} onClick={this.props.onClick}>
                 {this.props.children}
             </div>
         );

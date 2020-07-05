@@ -1,47 +1,34 @@
-@media only screen and (max-width: 1920px) {
-    :root {
-        /* colours */
+:root {
+    
+    /* color */
+    --primary-color: #3867d6;
+    --secondary-color: #6a92ef;
+    --graph-color-primary: #3867d6;
+    --graph-color-secondary: #6a92ef;
+    --background-color: #fbfbfc;
+    --text-color-normal: #2d3843;
+    --text-color-heading: #fff;
+    --hover-color: rgb(0,0,0,0.1);
 
-        /* LIGHT THEME */
-        --primary-color: #3867d6;
-        --secondary-color: #6a92ef;
-        --graph-color-primary: #3867d6;
-        --graph-color-secondary: #6a92ef;
-        --background-color: #fbfbfc;
-        --text-color-normal: #2d3843;
-        --text-color-heading: #fff;
-        --hover-color: rgb(0,0,0,0.1);
-        
+    /* font */
+    --font-family: sans-serif;
 
-        /* DARK THEME */
-        /* --primary-color: #0a0a0a;
-        --secondary-color: #a54d28;
-        --graph-color-primary: #cd6133;
-        --graph-color-secondary: #ff793f;
-        --background-color: #242424;
-        --text-color-normal: #d6d6d6;
-        --text-color-heading: #e7e7e7;
-        --hover-color: rgb(255,255,255,0.1); */
+    --font-size-large: 32px;
+    --font-size-navbar: 22px;
+    --font-size-heading: 18px;
+    --font-size-normal: 16px;
+    --font-size-graph: 12px;
 
-        /* font */
-        --font-family: sans-serif;
+    --font-weight-heading: 100;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
 
-        --font-size-large: 32px;
-        --font-size-navbar: 22px;
-        --font-size-heading: 18px;
-        --font-size-normal: 16px;
-        --font-size-graph: 12px;
-
-        --font-weight-heading: 100;
-        --font-weight-normal: 400;
-        --font-weight-bold: 600;
-
-        /* icon */
-        --icon-size-large: 35px;
-        --icon-size-medium: 27px;
-        --icon-size-small: 22px;
-    }
+    /* icon */
+    --icon-size-large: 35px;
+    --icon-size-medium: 27px;
+    --icon-size-small: 22px;
 }
+
 
 @media only screen and (max-width: 650px) {
     :root {

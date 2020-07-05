@@ -1,6 +1,5 @@
 import React from 'react';
 import { VictoryPie, VictoryLabel, VictoryLegend, VictoryTooltip } from 'victory';
-import Color from '../../styles/color';
 
 import styles from '../../styles/DonutChart.css';
 

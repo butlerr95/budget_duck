@@ -1,10 +1,6 @@
 import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
-
-import Font from '../../styles/font';
-import Color from '../../styles/color';
-
 import styles from '../../styles/WeekSelector.css';
 import DatePicker from '../Generic/DatePicker';
 

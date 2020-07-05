@@ -3,8 +3,8 @@ import React from 'react';
 import Card from '../Generic/Card';
 import WeekSelector from './WeekSelector';
 import WeekSummary from './WeekSummary';
-import LineGraph from '../Graphs/LineGraph';
-import DonutChart from '../Graphs/DonutChart';
+import LineGraph from '../MonthlyCard/LineGraph';
+import DonutChart from './DonutChart';
 import List from '../Generic/List';
 import Expense from './Expense';
 import RecentExpenses from './RecentExpenses';
@@ -57,7 +57,7 @@ class WeeklyCard extends React.Component {
     
     render() {
         return (
-            <Card style={weeklyCardStyle} title={"Weekly Spending"}>
+            <Card className={this.props.className} title={"Weekly Spending"}>
                 <WeekSelector />
                 <DonutChart height={375} width={500} data={exampleData} />
                 <RecentExpenses />
@@ -69,13 +69,6 @@ class WeeklyCard extends React.Component {
             </Card>
         );
     }
-}
-
-const weeklyCardStyle = {
-    display: 'flex',
-    gridArea: '2 / 2 / 4 / 2',
-    flexGrow: 1,
-    flexShrink: 1
 }
 
 export default WeeklyCard;

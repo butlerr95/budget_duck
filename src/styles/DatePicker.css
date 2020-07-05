@@ -42,6 +42,7 @@
 }
 
 .DayPickerInput-Overlay {
+    display: absolute;
     color: var(--text-color-normal);
     background-color: var(--background-color);
 }

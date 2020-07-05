@@ -1,9 +1,5 @@
 @import 'global.css';
 
-.line_graph_axis_bottom {
-
-}
-
 .line_graph .VictoryContainer svg g g line {
     stroke: var(--text-color-normal) !important;
     stroke-width: 1.5px;
@@ -11,15 +7,8 @@
 }
 
 .line_graph .VictoryContainer svg g g text[id^=chart-axis-0] tspan {
-    fill: var(--primary-color) !important;
-    font-family: var(--font-family) !important;
-    font-size: var(--font-size-graph) !important;
-    font-weight: var(--font-weight-bold);
-}
-
-.line_graph .VictoryContainer svg g g text[id^=chart-axis-1] tspan {
     fill: var(--text-color-normal) !important;
-    opacity: 0.5;
+    opacity: 0.75;
     font-family: var(--font-family) !important;
     font-size: var(--font-size-graph) !important;
     font-weight: var(--font-weight-bold);

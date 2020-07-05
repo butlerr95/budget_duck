@@ -1,16 +1,36 @@
-.weekly_card {
-    display: flex;
-    grid-area: 2 / 2 / 4 / 2;
+@import 'global.css';
+
+.app_grid {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: auto-fit repeat(3, 1fr) auto-fit;
+    grid-template-rows: auto repeat(2, 1fr) 0px;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
     flex-grow: 1;
     flex-shrink: 1;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 0px repeat(3, 1fr) 0px;
-    grid-template-rows: auto repeat(2, 1fr) 0px;
-    grid-column-gap: 40;
-    grid-row-gap: 40;
+.app_grid_navbar {
+    grid-area: 1 / 1 / 2 / 8;
+}
+
+.app_grid_weekly_card {
+    display: flex;
+    grid-area: 2 / 2 / 4 / 4;
     flex-grow: 1;
     flex-shrink: 1;
+}
+
+.app_grid_monthly_card {
+    grid-area: 3 / 4 / 3 / 7;
+    display: flex;
+}
+
+.app_grid_annual_card {
+    grid-area: 2 / 4 / 2 / 7;
+    display: flex;
 }

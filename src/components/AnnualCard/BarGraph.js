@@ -10,6 +10,7 @@ class BarGraph extends React.Component {
                 domainPadding={{x: 30, y: [0, 20]}}
                 width={this.props.width}
                 height={this.props.height}
+                data={this.props.data}
             >
                 <VictoryAxis 
                     orientation="bottom"

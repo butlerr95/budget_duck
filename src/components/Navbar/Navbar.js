@@ -7,7 +7,7 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div style={this.props.style}>
+            <div className={this.props.className}>
                 <div className={'navbar'}>
                     <NavbarItem onClick={this.handleBack}>
                         <MdArrowBack className={'navbar_icon'} />

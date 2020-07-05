@@ -1,26 +1,44 @@
-:root {
-    /* colours */
-    --primary-color: #3867d6;
-    --secondary-color: #6a92ef;
-    --background-color: #fbfbfc;
-    --text-color-normal: #2d3843;
-    --text-color-heading: #fff;
+@media only screen and (max-width: 1920px) {
+    :root {
+        /* colours */
+        --primary-color: #3867d6;
+        --secondary-color: #6a92ef;
+        --background-color: #fbfbfc;
+        --text-color-normal: #2d3843;
+        --text-color-heading: #fff;
 
-    /* font */
-    --font-family: sans-serif;
+        /* font */
+        --font-family: sans-serif;
 
-    --font-size-large: 32px;
-    --font-size-navbar: 22px;
-    --font-size-heading: 18px;
-    --font-size-normal: 16px;
-    --font-size-graph: 12px;
+        --font-size-large: 32px;
+        --font-size-navbar: 22px;
+        --font-size-heading: 18px;
+        --font-size-normal: 16px;
+        --font-size-graph: 12px;
 
-    --font-weight-heading: 100;
-    --font-weight-normal: 400;
-    --font-weight-bold: 600;
+        --font-weight-heading: 100;
+        --font-weight-normal: 400;
+        --font-weight-bold: 600;
 
-    /* icon */
-    --icon-size-large: 35px;
-    --icon-size-medium: 27px;
-    --icon-size-small: 22px;
+        /* icon */
+        --icon-size-large: 35px;
+        --icon-size-medium: 27px;
+        --icon-size-small: 22px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    :root {
+        /* font */
+        --font-size-large: 30px;
+        --font-size-navbar: 22px;
+        --font-size-heading: 18px;
+        --font-size-normal: 15px;
+        --font-size-graph: 14px;
+
+        /* icon */
+        --icon-size-large: 30px;
+        --icon-size-medium: 24px;
+        --icon-size-small: 18px;
+    }
 }

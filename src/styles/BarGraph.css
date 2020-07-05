@@ -1,0 +1,29 @@
+@import 'global.css';
+
+.bar_graph .VictoryContainer svg g path {
+    fill: var(--primary-color) !important;
+    stroke: var(--text-color-normal) !important;
+    stroke-width: 1.5px;
+    stroke-opacity: 0.1;
+}
+
+.bar_graph .VictoryContainer svg g g text tspan {
+    fill: var(--text-color-normal) !important;
+    opacity: 0.75;
+    font-family: var(--font-family) !important;
+    font-size: var(--font-size-graph) !important;
+    font-weight: var(--font-weight-bold);
+}
+
+.bar_graph .VictoryContainer svg g line {
+    fill: var(--text-color-normal) !important;
+    font-family: var(--font-family) !important;
+    font-size: var(--font-size-graph) !important;
+    font-weight: var(--font-weight-bold);
+}
+
+.bar_graph .VictoryContainer svg g g line {
+    stroke: var(--text-color-normal) !important;
+    stroke-width: 0.5px;
+    stroke-opacity: 0.4;
+}

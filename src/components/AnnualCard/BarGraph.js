@@ -1,16 +1,17 @@
 import React from 'react';
 import { VictoryChart, VictoryAxis, VictoryBar } from 'victory';
 
+import styles from '../../styles/BarGraph.css';
+
 class BarGraph extends React.Component {
     render() {
         return (
             <div className={'bar_graph'}>
             <VictoryChart
-                padding={{ top: 20, left: 40, right: 30, bottom: 40 }}
-                domainPadding={{x: 30, y: [0, 20]}}
+                padding={{ top: 20, left: 70, right: 30, bottom: 40 }}
+                domainPadding={{x: 30, y: [0, 30]}}
                 width={this.props.width}
                 height={this.props.height}
-                data={this.props.data}
             >
                 <VictoryAxis 
                     orientation="bottom"
@@ -22,9 +23,16 @@ class BarGraph extends React.Component {
                     orientation="left"
                     style={{ 
                         axis: { strokeWidth: 0 },
+                        grid: { stroke: "#818e99", strokeWidth: 0.5 },
+                    }}
+                    tickFormat={t => `£${t.toFixed(2)}`}
+                    grid={{
+                        
                     }}
                 />
-                <VictoryBar />
+                <VictoryBar 
+                    data={this.props.data}
+                />
             </VictoryChart>
         </div>
         );

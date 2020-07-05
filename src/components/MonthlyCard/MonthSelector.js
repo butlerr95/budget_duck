@@ -21,7 +21,7 @@ class MonthSelector extends React.Component {
         const month = date.getMonth();
         const year = date.getFullYear();
 
-        const dateString = monthNames[month] + "-" + year;
+        const dateString = monthNames[month] + " " + year;
 
         return dateString;
 

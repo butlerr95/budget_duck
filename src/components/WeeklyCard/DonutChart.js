@@ -23,7 +23,7 @@ class DonutChart extends React.Component {
                         textAnchor='middle'
                         x={this.props.width/2}
                         y={this.props.height/2.1}
-                        text={`£${this.props.data[0].y.toFixed(2)}`}
+                        text={this.props.data[0].y >= 0 ? `£${this.props.data[0].y.toFixed(2)}` : `-£${(this.props.data[0].y * -1).toFixed(2)}`}
                         style={{
                             fill: null,
                             stroke: null

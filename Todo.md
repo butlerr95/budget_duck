@@ -71,6 +71,7 @@ Seperate page/window that displays a form to allow the user to add an expense.
 - Move generic functions into a separate js file - i.e. getMonday() in DatePicker and WeekSelector
 - Calculate earliest week/month/year from the database and use this to restrict the user from selecting dates before that time
 - Make graphs/charts interactive
+- Deploy to Heroku free hosting with fake data
 
 ## Bugs
 - When DayPickerInput is selected and then the user clicks in the DayPicker overlay, the focus is shifted from DayPickerInput to DayPicker. Once this happens if the user clicks outside of the overlay it does not hide as it should - the user then has to choose a date or click on the DayPickerInput again and then click outside of the overlay.

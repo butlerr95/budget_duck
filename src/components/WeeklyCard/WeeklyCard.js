@@ -2,8 +2,6 @@ import React from 'react';
 
 import Card from '../Generic/Card';
 import WeekSelector from './WeekSelector';
-import WeekSummary from './WeekSummary';
-import LineGraph from '../MonthlyCard/LineGraph';
 import DonutChart from './DonutChart';
 import List from '../Generic/List';
 import Expense from './Expense';

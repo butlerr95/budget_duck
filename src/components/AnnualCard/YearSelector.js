@@ -2,9 +2,6 @@ import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
 import styles from '../../styles/Selector.css';
-import DatePicker from '../Generic/DatePicker';
-
-const dateFormat = 'dd/MM/yyyy';
 
 class YearSelector extends React.Component {
 

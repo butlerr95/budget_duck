@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '../Generic/Card';
 import LineGraph from './LineGraph';
 
-import WeekSelector from '../WeeklyCard/WeekSelector';
+import MonthSelector from './MonthSelector';
 
 const testData = [
     { x: 1, y: 1 },
@@ -43,8 +43,7 @@ class MonthlyCard extends React.Component {
     render() {
         return (
             <Card className={this.props.className} title={"Monthly Spending"}>
-                {/* Replace with Month Selector! */}
-                <WeekSelector />
+                <MonthSelector />
                 <LineGraph width={600} height={250} data={testData} />
             </Card>
         );

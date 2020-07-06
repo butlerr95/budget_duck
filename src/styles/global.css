@@ -29,7 +29,6 @@
     --icon-size-small: 22px;
 }
 
-
 @media only screen and (max-width: 650px) {
     :root {
         /* font */
@@ -44,4 +43,21 @@
         --icon-size-medium: 24px;
         --icon-size-small: 18px;
     }
+}
+
+.no_data {
+    display: flex;
+    user-select: none;
+    font-size: var(--font-size-heading);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-heading);
+    color: var(--text-color-normal);
+    flex-grow: 1;
+    width: 68%;
+    margin: 20px 0px 40px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
 }

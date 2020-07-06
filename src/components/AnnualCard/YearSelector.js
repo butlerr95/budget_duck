@@ -10,10 +10,9 @@ class YearSelector extends React.Component {
         forwardArrowDisabled: true
     };
 
-    // When the date is changed by the child DayPickerInput element, update the state
-    handleChildDateChange = (date) => {
-        this.setState({ date: date });
-        // Call this.props.onChange to pass value to parent
+    // When the year is changed, update the state
+    handleDateChange = () => {
+        this.props.onChange(this.state.date.getFullYear());
     }
 
     // Set the state of forwardArrowDisabled
@@ -34,6 +33,7 @@ class YearSelector extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.date !== this.state.date) {
+            this.handleDateChange();
             this.setForwardArrowDisabled();
         }
     }
@@ -54,7 +54,7 @@ class YearSelector extends React.Component {
         return (
             <div className={'selector'}>
                 <MdArrowBack className={'selector_button'} onClick={this.handleClickBack} />
-                <div className={'selector_text'} >{this.state.date.getFullYear()}</div>
+                <div className={'selector_text'}>{this.state.date.getFullYear()}</div>
                 <MdArrowForward 
                     className={`selector_button${this.state.forwardArrowDisabled ? '_disabled' : ''}`} 
                     onClick={this.state.forwardArrowDisabled ? undefined : this.handleClickForward} 

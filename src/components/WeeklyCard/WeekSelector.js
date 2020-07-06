@@ -2,7 +2,7 @@ import React from 'react';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 
 import styles from '../../styles/Selector.css';
-import DatePicker from '../Generic/DatePicker';
+import DatePicker from './DatePicker';
 
 class WeekSelector extends React.Component {
 

@@ -14,7 +14,6 @@ class Navbar extends React.Component {
 
     // Switch between light and dark themes
     toggleTheme = () => {
-        console.log(this.state.theme);
         if(this.state.theme === 'light') {
             setTheme(darkTheme);
             this.setState({ theme: 'dark' });

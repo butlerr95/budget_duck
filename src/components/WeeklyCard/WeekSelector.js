@@ -13,8 +13,9 @@ class WeekSelector extends React.Component {
 
     // When the date is changed by the child DayPickerInput element, update the state
     handleChildDateChange = (date) => {
-        this.setState({ date: date });
-        // Call this.props.onChange to pass value to parent
+        const weekStartDate = this.getMonday(date);
+        this.setState({ date: weekStartDate });
+        this.props.onChange(weekStartDate);
     }
     
     // Given a date return the Monday of that week
@@ -52,13 +53,17 @@ class WeekSelector extends React.Component {
     handleClickBack = (event) => {
         let newDate = new Date(this.state.date);
         newDate.setDate(this.state.date.getDate() - 7);
-        this.setState({ date: newDate });
+        const weekStartDate = this.getMonday(newDate);
+        this.setState({ date: weekStartDate });
+        this.props.onChange(weekStartDate);
     }
 
     handleClickForward = (event) => {
         let newDate = new Date(this.state.date);
         newDate.setDate(this.state.date.getDate() + 7);
-        this.setState({ date: newDate });
+        const weekStartDate = this.getMonday(newDate);
+        this.setState({ date: weekStartDate });
+        this.props.onChange(weekStartDate);
     }
 
     render() {

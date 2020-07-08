@@ -52,7 +52,7 @@ class AnnualCard extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if(prevState.year !== this.state.year) {
-            this.getAnnualSummary(this.state.year);
+            this.getAnnualSummary();
         }
     }
 
@@ -61,7 +61,7 @@ class AnnualCard extends React.Component {
     }
 
     getAnnualSummary() {
-        budgeting.get(`/annual`, { params: { year: this.state.year } })
+        budgeting.get(`/annual/summary`, { params: { year: this.state.year } })
             .then((response) => {
                 const result = [];
                 const months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];

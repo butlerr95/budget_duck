@@ -16,8 +16,6 @@ class MonthSelector extends React.Component {
                       "May","Jun","Jul","Aug",
                       "Sep", "Oct","Nov","Dec"];
 
-        console.log(date);
-
         const month = date.getMonth();
         const year = date.getFullYear();
 

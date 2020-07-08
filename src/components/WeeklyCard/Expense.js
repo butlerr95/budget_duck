@@ -8,7 +8,7 @@ class Expense extends React.Component {
                 <div className={'expense_date'} >{this.props.expense.date}</div>
                 <div className={'expense_category'} >{this.props.expense.category}</div>
                 <div className={'expense_description'} >{this.props.expense.description}</div>
-                <div className={'expense_amount'} >{`£${this.props.expense.amount.toFixed(2)}`}</div>
+                <div className={'expense_amount'} >{this.props.expense.amount >= 0 ? `£${this.props.expense.amount.toFixed(2)}` : `- £${(this.props.expense.amount * -1).toFixed(2)}`}</div>
             </div>
         );
     }

@@ -10,50 +10,6 @@ import RecentExpenses from './RecentExpenses';
 import budgeting from '../../api/budgeting';
 import getMonday from '../../utils/DateUtils';
 
-const expenses = [
-    {
-        id: 1,
-        date: "03/07/2020",
-        category: "Food & Drink",
-        description: "Dinner for two",
-        amount: 28.79
-    },
-    {
-        id: 2,
-        date: "02/07/2020",
-        category: "Travel",
-        description: "Train to London",
-        amount: 56.70
-    },
-    {
-        id: 3,
-        date: "30/06/2020",
-        category: "Entertainment",
-        description: "Cinema",
-        amount: 11.99
-    },
-    {
-        id: 4,
-        date: "29/06/2020",
-        category: "Education",
-        description: "Udemy React Course",
-        amount: 14.99
-    },
-    {
-        id: 5,
-        date: "29/06/2020",
-        category: "Leisure",
-        description: "Raleigh Bike 29\"",
-        amount: 1095.87
-    },
-];
-
-const exampleData = [
-    { x: "Remaining", y: 15 },
-    { x: "Spent", y: 47.50 }
-];
-
-
 class WeeklyCard extends React.Component {
     
     state = {

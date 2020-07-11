@@ -28,7 +28,7 @@ class MonthSelector extends React.Component {
     // When the date is changed by the child DayPickerInput element, update the state
     handleChildDateChange = (date) => {
         this.setState({ date: date });
-        // Call this.props.onChange to pass value to parent
+        this.props.onChange(date);
     }
 
     // Set the state of forwardArrowDisabled
@@ -61,12 +61,14 @@ class MonthSelector extends React.Component {
         let newDate = new Date(this.state.date);
         newDate.setMonth(this.state.date.getMonth() - 1);
         this.setState({ date: newDate });
+        this.props.onChange(newDate);
     }
 
     handleClickForward = (event) => {
         let newDate = new Date(this.state.date);
         newDate.setMonth(this.state.date.getMonth() + 1);
         this.setState({ date: newDate });
+        this.props.onChange(newDate);
     }
 
     render() {

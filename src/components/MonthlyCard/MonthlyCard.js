@@ -5,46 +5,71 @@ import LineGraph from './LineGraph';
 
 import MonthSelector from './MonthSelector';
 
-const testData = [
-    { x: 1, y: 1 },
-    { x: 2, y: 3 },
-    { x: 3, y: 4 },
-    { x: 4, y: 7 },
-    { x: 5, y: 9 },
-    { x: 6, y: 9 },
-    { x: 7, y: 14 },
-    { x: 8, y: 15 },
-    { x: 9, y: 16 },
-    { x: 10, y: 18 },
-    { x: 11, y: 22 },
-    { x: 12, y: 22 },
-    { x: 13, y: 22 },
-    { x: 14, y: 23 },
-    { x: 15, y: 26 },
-    { x: 16, y: 29 },
-    { x: 17, y: 30 },
-    { x: 18, y: 31 },
-    { x: 19, y: 39 },
-    { x: 20, y: 40 },
-    { x: 21, y: 40 },
-    { x: 22, y: 41 },
-    { x: 23, y: 42 },
-    { x: 24, y: 42 },
-    { x: 25, y: 44 },
-    { x: 26, y: 47 },
-    { x: 27, y: 51 },
-    { x: 28, y: 51 },
-    { x: 29, y: 52 },
-    { x: 30, y: 55 },
-    { x: 31, y: 56 }
-];
+import budgeting from '../../api/budgeting';
 
 class MonthlyCard extends React.Component {
+    
+    state = {
+        date: new Date(),
+        hasData: true,
+        data: []
+    }
+
+    componentDidMount() {
+        this.getMonthlySummary();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.date !== this.state.date) {
+            this.getMonthlySummary();
+        }
+    }
+
+    getFirstOfMonthString(date) {
+        const day = "01";
+        const month = ("0" + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+
+        const dateString = `${year}-${month}-${day}`
+
+        return dateString;
+    }
+
+    getMonthlySummary() {
+        budgeting.get(`/monthly/summary`, { params: { month_start: this.getFirstOfMonthString(this.state.date) } })
+            .then((response) => {
+                const result = [];
+                for (const [key, value] of Object.entries(response.data)) {
+                    result.push({ x: key, y: value });
+                }
+                this.setState({ data: result });
+                this.setHasData();
+            });
+    }
+
+    // When the date is changed, update the state
+    handleDateChange(newDate) {
+        this.setState({ date: newDate });
+    }
+    
+    objectArraySum(array, key) {
+        return array.reduce((a, b) => a + (b[key] || 0), 0);
+    }
+
+    setHasData() {
+        if(this.objectArraySum(this.state.data, "y") === 0) {
+            this.setState({ hasData: false });
+        }
+        else {
+            this.setState({ hasData: true });
+        }
+    }
+
     render() {
         return (
             <Card className={this.props.className} title={"Monthly Spending"}>
-                <MonthSelector />
-                <LineGraph width={600} height={250} data={testData} />
+                <MonthSelector onChange={this.handleDateChange.bind(this)} />
+                {this.state.hasData ? <LineGraph width={600} height={250} data={this.state.data} /> : <div className={'no_data'}><div>No data</div></div>}
             </Card>
         );
     }

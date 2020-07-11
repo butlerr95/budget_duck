@@ -33,7 +33,7 @@ class LineGraph extends React.Component {
                             // Overwritten by CSS
                             stroke: '#000'
                         }}}
-                        interpolation="natural"
+                        interpolation="linear"
                         data={this.props.data}
                     />
                 </VictoryChart>
